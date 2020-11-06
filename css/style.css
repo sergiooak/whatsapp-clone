@@ -1,0 +1,138 @@
+:root {
+  --body-bg-color: #dadbd5;
+  --bg-color: #ededed;
+  --border-color: #dadada;
+  --icon-color: #919191;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 0px;
+  background-color: var(--body-bg-color);
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial,
+    sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1396px;
+  background-color: white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container aside {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  border-right: 1px solid var(--border-color);
+}
+
+.container aside header {
+  display: flex;
+  justify-content: space-between;
+  height: 59px;
+  background-color: var(--bg-color);
+  padding: 0px 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 59px;
+  background-color: var(--bg-color);
+  padding: 0px 16px;
+}
+
+header figure {
+  width: 40px;
+  height: 40px;
+  background-color: var(--icon-color);
+  border-radius: 100%;
+}
+
+header .title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 40px;
+  flex: 1;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+header .title small {
+  font-size: 13px;
+  line-height: 13px;
+  padding-top: 5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.container aside .info {
+  height: 138px;
+  background-color: var(--icon-color);
+}
+
+.container aside nav {
+  flex: 1;
+}
+
+.container main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main .chat {
+  border-top: 1px solid var(--border-color);
+  flex: 1;
+}
+
+main footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  padding: 0px 16px;
+  background-color: var(--bg-color);
+}
+main footer form {
+  flex: 1;
+  padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main footer form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  border: 0;
+}
+
+.icons {
+  display: flex;
+}
+button {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  border-radius: 100%;
+  color: var(--icon-color);
+}
+button:focus {
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
