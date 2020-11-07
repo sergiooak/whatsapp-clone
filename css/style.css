@@ -1,8 +1,23 @@
 :root {
   --body-bg-color: #dadbd5;
   --bg-color: #ededed;
+  --chat-bg-color: #e5ddd5;
+  --chat-text-color: rgb(48, 48, 48);
   --border-color: #dadada;
   --icon-color: #919191;
+}
+
+::-webkit-scrollbar {
+  width: 6px !important;
+  /* height: 6px!important; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 100%, 0.1);
 }
 
 body {
@@ -89,8 +104,36 @@ header .title small {
 }
 
 main .chat {
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--chat-bg-color);
+  overflow-y: overlay;
+  background-image: url("/img/bg-light.png");
   flex: 1;
+  padding: 16px 150px;
+}
+
+main .chat .text {
+  display: flex;
+  padding: 6px 9px;
+  border-radius: 8px;
+  color: var(--chat-text-color);
+  margin-bottom: 4px;
+  font-size: 14.2px;
+  min-width: 140px;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
+}
+
+main .chat .me {
+  background-color: #dcf8c9;
+  align-self: flex-end;
+}
+
+main .chat .other {
+  background-color: white;
+  align-self: flex-start;
 }
 
 main footer {
@@ -103,7 +146,6 @@ main footer {
 }
 main footer form {
   flex: 1;
-  padding: 0px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,9 +154,16 @@ main footer form {
 main footer form input {
   width: 100%;
   height: 40px;
+  margin: 0px 16px;
+  padding: 0px 16px;
   border-radius: 20px;
   background-color: white;
+  font-size: 15px;
+  line-height: 20px;
   border: 0;
+}
+main footer form input:focus {
+  outline: 0;
 }
 
 .icons {
